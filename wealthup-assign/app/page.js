@@ -11,6 +11,26 @@ export default function Home() {
                 <div className="content">
                 <h1 className="t1">Check your financial health</h1>
                 <h4 className='t2'>Use WeathoMeter to get a free report <br /> card for your finances - within minutes!</h4>
+                <div className="button"> <h3 className="t3">Get Started</h3></div>
+                <div className="miniblk">
+                    <div className="blk1">
+                      <Image src="/tick01.png" height="28" width="28" className='tickimg'/>
+                      <h5 className="t4">Expected Retirement Age</h5>
+                    </div>
+                    <div className="blk1">
+                      <Image src="/tick01.png" height="28" width="28" className='tickimg'/>
+                      <h5 className="t4">Expected Retirement Age</h5>
+                    </div>
+                </div>
+                <div className="miniblk2">
+                <div className="blk1">
+                  <Image src="/tick01.png" height="28" width="28" className='tickimg'/>
+                  <h5 className="t4">Expected Retirement Age</h5>
+                </div>
+                <div className="blk1">
+                  <Image src="/tick01.png" height="28" width="28" className='tickimg'/>
+                  <h5 className="t4">Expected Retirement Age</h5>
+                </div></div>
                 </div>
               
         </div>

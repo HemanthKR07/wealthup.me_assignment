@@ -1,6 +1,6 @@
 body{
   background-color: #0A5783;
-  height:1000px;
+  height:1497px;
 }
 
 .bg{
@@ -16,9 +16,9 @@ body{
 .t1{
   font-family:Noto Sans Indic Siyaq Numbers;
   color:white;
-  font-size:1.25cm;
+  font-size:1.8cm;
   word-spacing:7px;
-  margin-left:305px;
+  margin-left:175px;
   margin-top:6px;
   letter-spacing:1.2px;
 }
@@ -27,7 +27,38 @@ body{
   font-family:poppins;
   color:white;
   font-weight:200;
-  font-size:22px;
-  margin-left:425px;
+  font-size:25px;
+  margin-left:385px;
   margin-top:-20px;
+}
+
+.button{
+  border:0px solid black;
+  border-radius:25px;
+  background-color:#FB7306;
+  width:170px;
+  height:40px;
+  margin-left:550px;
+}
+
+.t3{
+  font-family:Noto Sans Indic Siyaq Numbers;
+  font-size:20px;
+  color:white;
+  padding-top:2px;
+  padding-left:30px;
+}
+
+.blk1{
+  display:flex;
+  margin-top:33px;
+  margin-left:240px;
+}
+.t4{
+  margin-top:-3px;
+  margin-left:25px;
+  color:white;
+  font-size:19px;
+  letter-spacing:1px;
+  font-family:Noto Sans Indic Siyaq Numbers;
 }
