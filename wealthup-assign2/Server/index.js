@@ -75,9 +75,9 @@ app.get('/api/getcode',  async (req,res)=>{
 
 app.post('/api/verifycode', async(req,res)=>{
     const UserCode = req.body.Ucode;
-    console.log("User input : ",UserCode);
+    console.log("User input :",UserCode);
     const codeBlk = await Db.findOne({index:i});
-    console.log("DB Code : ",codeBlk.code)
+    console.log("DB Code : ", codeBlk.code)
     if (codeBlk){
         if (codeBlk.status == "Exp"){
             res.status(200).json({"status":"Code Expired, Generate new one"})

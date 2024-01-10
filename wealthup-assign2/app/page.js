@@ -23,14 +23,14 @@ export default function Home() {
   }
 
  async function verify(){
-    const resp = await fetch('http://localhost:2000/verifycode',{
+    const resp = await fetch('http://localhost:2000/api/verifycode',{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
       },
-      body:{
+      body:JSON.stringify({
           "Ucode" : inp
-      }
+      })
     });
     const op = document.querySelector(".output");
     if (resp.status === 200){
@@ -57,7 +57,7 @@ export default function Home() {
           }} placeholder="Type here"/>
          
           <br />
-          <button className="b1" onCLick={verify}>Verify</button>
+          <button className="b1" onClick={verify}>Verify</button>
           <h5 className="output"></h5>
     </div>
     </>

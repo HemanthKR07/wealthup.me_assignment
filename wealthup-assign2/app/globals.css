@@ -111,3 +111,14 @@ body{
   border:0px;
   cursor:pointer;
 }
+
+.b1{
+  cursor:pointer;
+}
+
+.output{
+  color:white;
+  font-family:montserrat;
+  font-size:20px;
+  text-align: center;
+}
