@@ -1,5 +1,5 @@
-import {generateCode, timerOn, updateStatus, i, code} from "../Functions/allFunctions";
-import {Db} from "../database/db";
+import {Db} from "../database/db.js";
+import {i, code, generateCode, updateStatus, timerOn} from "../functions/allFunctions.js";
 
 export const generator = async (req,res)=>{
     i++;

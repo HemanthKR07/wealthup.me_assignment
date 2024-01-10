@@ -1,9 +1,6 @@
-import {Db} from "../database/db";
-
 let i = -1;
 
 let code = "";
-
 
 function generateCode(){
     code="";
@@ -35,4 +32,4 @@ async function timerOn(i){
         },60000)
 }
 
-export {generateCode, timerOn, updateStatus , i, code};
+export {i,code, generateCode, updateStatus, timerOn};
