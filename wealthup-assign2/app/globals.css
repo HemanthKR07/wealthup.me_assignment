@@ -98,10 +98,16 @@ body{
 .refresh{
   fill:white;
   position: absolute;
-  margin-top:-55px;
+  margin-top:-95px;
   margin-left:290px;
 }
 
 .refresh:hover{
   cursor: pointer;
+}
+
+.b2{
+  background-color:black;
+  border:0px;
+  cursor:pointer;
 }

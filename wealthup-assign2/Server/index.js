@@ -57,7 +57,7 @@ async function timerOn(i){
 }
 
 
-app.get('/getcode',  async (req,res)=>{
+app.get('/api/getcode',  async (req,res)=>{
     i++;
     generateCode();
     console.log("Code generated : ", code)
@@ -73,21 +73,21 @@ app.get('/getcode',  async (req,res)=>{
     }
 );
 
-app.post('/verifycode', async(req,res)=>{
+app.post('/api/verifycode', async(req,res)=>{
     const UserCode = req.body.Ucode;
     console.log("User input : ",UserCode);
     const codeBlk = await Db.findOne({index:i});
     console.log("DB Code : ",codeBlk.code)
     if (codeBlk){
         if (codeBlk.status == "Exp"){
-            res.send("Code Expired, Generate new one");
+            res.status(200).json({"status":"Code Expired, Generate new one"})
         } else if (codeBlk.code != UserCode){
-            res.send("Invalid Code");
+            res.status(200).json({"status":"Invalid Code"})
         } else if (codeBlk.code == UserCode){
                     if (codeBlk.status == "Used"){
-                        res.send("Code already used, generate new one");
+                        res.status(200).json({"status":"Code already used, generate new one"})
                     } else {
-                        res.send("Valid Code !");
+                        res.status(200).json({"status":"Valid Code !"})
                         const location = {index : i};
                         const newStatus = {$set : {status : "Used"}}
                         updateStatus(location,newStatus);
