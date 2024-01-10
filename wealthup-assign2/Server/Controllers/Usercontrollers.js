@@ -1,11 +1,11 @@
-import {generateCode, timerOn, updateStatus, i, code} from "../Functions/allFunctions"
-import {Db} from "../database/db;"
+import {generateCode, timerOn, updateStatus, i, code} from "../Functions/allFunctions";
+import {Db} from "../database/db";
 
-export const generator = (req,res)=>{
+export const generator = async (req,res)=>{
     i++;
         generateCode();
         res.send(code)
-        Db.create({
+        await Db.create({
             index:i,
             code:code,
             status:"valid"
